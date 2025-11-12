@@ -23,7 +23,7 @@ DISTRIBUTED_ARGS="
     --master_port $MASTER_PORT
 "
 
-python -m torch.distributed.run $DISTRIBUTED_ARGS ./02_grpo_train_8b.py \
+python -m torch.distributed.run $DISTRIBUTED_ARGS ./02_grpo_train.py \
     --deepspeed ${DS_CONFIG_PATH} \
     --model_name_or_path $MODEL_NAME_OR_PATH \
     --output_dir $SAVE_PATH \
